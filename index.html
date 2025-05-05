@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lights Out - Simba Edition</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <h1>🦁 Lights Out: Play like Simba</h1>
+
+    <section id="stats">
+      <div><label>🎯 Target:</label> Match all tiles ON or OFF</div>
+      <div><label>⏳ Time Left:</label> <span id="timer">120</span> sec</div>
+      <div><label>🏅 Score:</label> <span id="score">0</span></div>
+    </section>
+
+    <section id="instructions">
+      <label><strong>📝 How to Play</strong></label>
+      <p>Tap a tile to toggle it and its neighbors. Complete the board before time runs out!</p>
+    </section>
+
+    <section>
+      <label><strong>🧩 Game Board</strong></label>
+      <div id="container"></div>
+    </section>
+
+    <section class="buttons">
+      <label><strong>🎮 Controls</strong></label><br/>
+      <button onclick="resetBoard()">🔁 Reset</button>
+      <button onclick="toggleAddendum()">📖 Addendum</button>
+    </section>
+
+    <section id="popup">
+      <label><strong>🎉 Game Result</strong></label>
+      <p></p>
+      <button onclick="closePopup()">Close</button>
+    </section>
+
+    <section id="addendum">
+      <label><strong>📘 Developer Notes</strong></label>
+      <ul>
+        <li>🟨 Tiles start randomized using simulated toggles</li>
+        <li>🔁 Each move toggles the tile + neighbors</li>
+        <li>🏆 Win = all tiles ON or OFF</li>
+        <li>⏱️ 120-second timer to finish</li>
+        <li>🎨 Theme: Simba colors (Golden Yellow, Earthy Brown, Sky Blue)</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Last updated: <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
+</body>
+</html>
